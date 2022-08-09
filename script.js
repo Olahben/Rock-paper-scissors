@@ -56,7 +56,7 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         if(computerPoints > playerPoints) { //Report a winner or looser
             console.log('The computer won.')
         } else if(playerPoints > computerPoints) {
-            console.log('You won! Hooray...')//d
+            console.log('You won! Hooray...')
         }
             
     }
