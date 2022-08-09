@@ -11,3 +11,8 @@ function getComputerChoice() {
  }
  
  //console.log(getComputerChoice());
+
+let computerPoints = 0;
+let playerPoints = 0;
+
+
