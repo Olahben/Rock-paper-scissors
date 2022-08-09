@@ -42,3 +42,22 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         return 'A fatal error has ocurred'
     }
     } 
+
+
+    function game() {
+        for(let i = 0; i < 5; i++) {
+            const playerSelection = prompt('Choose a weapon, rock, paper or scissors').toLowerCase(); // get PlayerSelection
+                                                                            // make playerSelection case insensetive
+            const computerSelection = getComputerChoice(); //Get computerSelection
+            console.log(playRound(playerSelection, computerSelection)); //Call the playRound function 5 times
+            console.log('Computer points:' + computerPoints);// log computerPoints
+            console.log('Your points:' + playerPoints);//log playerPoints
+        }
+        if(computerPoints > playerPoints) { //Report a winner or looser
+            console.log('The computer won.')
+        } else if(playerPoints > computerPoints) {
+            console.log('You won! Hooray...')//d
+        }
+            
+    }
+    game();
