@@ -71,7 +71,6 @@ const rock = document.querySelector('.rock')
 const paper = document.querySelector('.paper')
     console.log(paper)
 
-
 const scissors = document.querySelector('.scissors')
     console.log(scissors)
 
