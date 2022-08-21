@@ -91,3 +91,4 @@ scissors.addEventListener('click', () => {
 });
 
 const result = document.querySelector('.result')
+const score = document.querySelector('.score')
