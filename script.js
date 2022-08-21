@@ -21,22 +21,22 @@ function playRound(playerSelection, computerSelection) { // function that plays 
     if(playerSelection === computerSelection) {//Comparison of the computer selection and player selection
          result.textContent = 'It\'s a tie'
     } else if(playerSelection === 'rock' && computerSelection === 'paper') {
-        computerPoints++//Add a point to the player who won that round
+         computerScore.textContent += 1;//Add a point to the player who won that round
          result.textContent = 'You lost, rock does not beat paper'; // Return a statement based on that comparison
     } else if(playerSelection === 'rock' && computerSelection === 'scissors') {
-        playerPoints++
+        userScore.textContent +=  1;
         result.textContent = 'You won, rock beats scissors';
     } else if(playerSelection === 'paper' && computerSelection === 'scissors') {
-        computerPoints++
+        computerScore.textContent += 1;
         result.textContent = 'You lost, paper does not beat scissors';
     } else if(playerSelection === 'paper' && computerSelection === 'rock') {
-        playerPoints++
+        userScore.textContent += 1;
         result.textContent = 'You won, paper beats rock';
     } else if(playerSelection === 'scissors' && computerSelection === 'rock') {
-        computerPoints++ 
+        computerScore.textContent += 1; 
         result.textContent = 'You lost, scissors does not beat paper.';
     }else if(playerSelection === 'scissors' && computerSelection === 'paper') {
-        playerPoints++
+        userScore.textContent += 1;
         result.textContent = 'You won, scissors beats paper';
     } else {
         result.textContent = 'A fatal error has ocurred';
@@ -91,5 +91,7 @@ scissors.addEventListener('click', () => {
 });
 
 const result = document.querySelector('.result')
-const score = document.querySelector('.score')
+const userScore = document.querySelector('.user-score')
+const computerScore = document.querySelector('.computer-score');
+
 
