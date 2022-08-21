@@ -39,7 +39,7 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         playerPoints++
         result.textContent = 'You won, scissors beats paper';
     } else {
-        return 'A fatal error has ocurred'
+        result.textContent = 'A fatal error has ocurred';
     }
     } 
 
@@ -92,3 +92,4 @@ scissors.addEventListener('click', () => {
 
 const result = document.querySelector('.result')
 const score = document.querySelector('.score')
+
