@@ -21,22 +21,22 @@ function playRound(playerSelection, computerSelection) { // function that plays 
     if(playerSelection === computerSelection) {//Comparison of the computer selection and player selection
          result.textContent = 'It\'s a tie'
     } else if(playerSelection === 'rock' && computerSelection === 'paper') {
-         computerScore.textContent += 1;//Add a point to the player who won that round
+         computerScore.textContent++;//Add a point to the player who won that round
          result.textContent = 'You lost, rock does not beat paper'; // Return a statement based on that comparison
     } else if(playerSelection === 'rock' && computerSelection === 'scissors') {
-        userScore.textContent +=  1;
+        userScore.textContent++;
         result.textContent = 'You won, rock beats scissors';
     } else if(playerSelection === 'paper' && computerSelection === 'scissors') {
-        computerScore.textContent += 1;
+        computerScore.textContent++;
         result.textContent = 'You lost, paper does not beat scissors';
     } else if(playerSelection === 'paper' && computerSelection === 'rock') {
-        userScore.textContent += 1;
+        userScore.textContent++;
         result.textContent = 'You won, paper beats rock';
     } else if(playerSelection === 'scissors' && computerSelection === 'rock') {
-        computerScore.textContent += 1; 
+        computerScore.textContent++; 
         result.textContent = 'You lost, scissors does not beat paper.';
     }else if(playerSelection === 'scissors' && computerSelection === 'paper') {
-        userScore.textContent += 1;
+        userScore.textContent++;
         result.textContent = 'You won, scissors beats paper';
     } else {
         result.textContent = 'A fatal error has ocurred';
