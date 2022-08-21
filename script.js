@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) { // function that plays 
     } 
 
 
-    function game() {
+    /*function game() {
         for(let i = 0; i < 5; i++) {
             const playerSelection = prompt('Choose a weapon, rock, paper or scissors').toLowerCase(); // get PlayerSelection
                                                                             // make playerSelection case insensetive
@@ -61,3 +61,7 @@ function playRound(playerSelection, computerSelection) { // function that plays 
             
     }
     game();
+    */
+   const buttons = document.querySelectorAll('button')
+
+   console.log(buttons)
