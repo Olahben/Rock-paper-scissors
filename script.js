@@ -12,8 +12,6 @@ function getComputerChoice() {
  
  //console.log(getComputerChoice());
 
-let computerPoints = 0;
-let playerPoints = 0;
 
 
 function playRound(playerSelection, computerSelection) { // function that plays a single round of Rock paper scissors
