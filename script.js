@@ -19,11 +19,13 @@ function playRound(playerSelection, computerSelection) { // function that plays 
     if(playerSelection === computerSelection) {//Comparison of the computer selection and player selection
          result.textContent = 'It\'s a tie'
          if(userScore.textContent == 5) {
+            endGame()
             result.textContent = 'You won Hooray! ...'
             return;
         } 
 
         if(computerScore.textContent == 5) {
+            endGame()
             result.textContent = 'You lost :(.'
             return;
         }
@@ -31,11 +33,13 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         computerScore.textContent++;//Add a point to the player who won that round
           result.textContent = 'You lost, rock does not beat paper'; // Return a statement based on that comparison
           if(userScore.textContent == 5) {
+            endGame()
             result.textContent = 'You won Hooray! ...'
             return;
         } 
 
         if(computerScore.textContent == 5) {
+            endGame()
             result.textContent = 'You lost :(.'
             return;
         }
@@ -43,11 +47,13 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         userScore.textContent++;
         result.textContent = 'You won, rock beats scissors';
         if(userScore.textContent == 5) {
+            endGame()
             result.textContent = 'You won Hooray! ...'
             return;
         } 
 
         if(computerScore.textContent == 5) {
+            endGame()
             result.textContent = 'You lost :(.'
             return;
         }
@@ -55,11 +61,13 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         computerScore.textContent++;
         result.textContent = 'You lost, paper does not beat scissors';
         if(userScore.textContent == 5) {
+            endGame()
             result.textContent = 'You won Hooray! ...'
             return;
         } 
 
         if(computerScore.textContent == 5) {
+            endGame()
             result.textContent = 'You lost :(.'
             return;
         }
@@ -67,11 +75,13 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         userScore.textContent++;
         result.textContent = 'You won, paper beats rock';
         if(userScore.textContent == 5) {
+            endGame()
             result.textContent = 'You won Hooray! ...'
             return;
         } 
 
         if(computerScore.textContent == 5) {
+            endGame()
             result.textContent = 'You lost :(.'
             return;
         }
@@ -79,11 +89,13 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         computerScore.textContent++; 
         result.textContent = 'You lost, scissors does not beat paper.';
         if(userScore.textContent == 5) {
+            endGame()
             result.textContent = 'You won Hooray! ...'
             return;
         } 
 
         if(computerScore.textContent == 5) {
+            endGame()
             result.textContent = 'You lost :(.'
             return;
         }
@@ -91,11 +103,13 @@ function playRound(playerSelection, computerSelection) { // function that plays 
         userScore.textContent++;
         result.textContent = 'You won, scissors beats paper';
         if(userScore.textContent == 5) {
+            endGame()
             result.textContent = 'You won Hooray! ...'
             return;
         } 
 
         if(computerScore.textContent == 5) {
+            endGame()
             result.textContent = 'You lost :(.'
             return;
         }
