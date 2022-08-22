@@ -139,3 +139,9 @@ const computerScore = document.querySelector('.computer-score');
 
 
 //console.log(computerScore.textContent)
+
+function endGame() {
+    result.textContent = '';
+    userScore.textContent = 0;
+    computerScore.textContent = 0;
+}
