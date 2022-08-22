@@ -20,48 +20,111 @@ function playRound(playerSelection, computerSelection) { // function that plays 
     //playerSelection = playerSelection.toLowerCase();
     if(playerSelection === computerSelection) {//Comparison of the computer selection and player selection
          result.textContent = 'It\'s a tie'
+         if(userScore.textContent == 5) {
+            result.textContent = 'You won Hooray! ...'
+            return;
+        } 
+
+        if(computerScore.textContent == 5) {
+            result.textContent = 'You lost :(.'
+            return;
+        }
     } else if(playerSelection === 'rock' && computerSelection === 'paper') {
-         computerScore.textContent++;//Add a point to the player who won that round
-         result.textContent = 'You lost, rock does not beat paper'; // Return a statement based on that comparison
+        computerScore.textContent++;//Add a point to the player who won that round
+          result.textContent = 'You lost, rock does not beat paper'; // Return a statement based on that comparison
+          if(userScore.textContent == 5) {
+            result.textContent = 'You won Hooray! ...'
+            return;
+        } 
+
+        if(computerScore.textContent == 5) {
+            result.textContent = 'You lost :(.'
+            return;
+        }
     } else if(playerSelection === 'rock' && computerSelection === 'scissors') {
         userScore.textContent++;
         result.textContent = 'You won, rock beats scissors';
+        if(userScore.textContent == 5) {
+            result.textContent = 'You won Hooray! ...'
+            return;
+        } 
+
+        if(computerScore.textContent == 5) {
+            result.textContent = 'You lost :(.'
+            return;
+        }
     } else if(playerSelection === 'paper' && computerSelection === 'scissors') {
         computerScore.textContent++;
         result.textContent = 'You lost, paper does not beat scissors';
+        if(userScore.textContent == 5) {
+            result.textContent = 'You won Hooray! ...'
+            return;
+        } 
+
+        if(computerScore.textContent == 5) {
+            result.textContent = 'You lost :(.'
+            return;
+        }
     } else if(playerSelection === 'paper' && computerSelection === 'rock') {
         userScore.textContent++;
         result.textContent = 'You won, paper beats rock';
+        if(userScore.textContent == 5) {
+            result.textContent = 'You won Hooray! ...'
+            return;
+        } 
+
+        if(computerScore.textContent == 5) {
+            result.textContent = 'You lost :(.'
+            return;
+        }
     } else if(playerSelection === 'scissors' && computerSelection === 'rock') {
         computerScore.textContent++; 
         result.textContent = 'You lost, scissors does not beat paper.';
+        if(userScore.textContent == 5) {
+            result.textContent = 'You won Hooray! ...'
+            return;
+        } 
+
+        if(computerScore.textContent == 5) {
+            result.textContent = 'You lost :(.'
+            return;
+        }
     }else if(playerSelection === 'scissors' && computerSelection === 'paper') {
         userScore.textContent++;
         result.textContent = 'You won, scissors beats paper';
+        if(userScore.textContent == 5) {
+            result.textContent = 'You won Hooray! ...'
+            return;
+        } 
+
+        if(computerScore.textContent == 5) {
+            result.textContent = 'You lost :(.'
+            return;
+        }
     } else {
         result.textContent = 'A fatal error has ocurred';
     }
     } 
 
 
-    /*function game() {
+    function game() {
         for(let i = 0; i < 5; i++) {
-            const playerSelection = prompt('Choose a weapon, rock, paper or scissors').toLowerCase(); // get PlayerSelection
+            //const playerSelection = prompt('Choose a weapon, rock, paper or scissors').toLowerCase(); // get PlayerSelection
                                                                             // make playerSelection case insensetive
-            const computerSelection = getComputerChoice(); //Get computerSelection
-            console.log(playRound(playerSelection, computerSelection)); //Call the playRound function 5 times
-            console.log('Computer points:' + computerPoints);// log computerPoints
-            console.log('Your points:' + playerPoints);//log playerPoints
+            //const computerSelection = getComputerChoice(); //Get computerSelection
+            //console.log(playRound(playerSelection, computerSelection)); //Call the playRound function 5 times
+            //console.log('Computer points:' + computerPoints);// log computerPoints
+            //console.log('Your points:' + playerPoints);//log playerPoints
         }
         if(computerPoints > playerPoints) { //Report a winner or looser
-            console.log('The computer won.')
+            result.textContent = 'The computer won.'
         } else if(playerPoints > computerPoints) {
-            console.log('You won! Hooray...')
+            result.textContent = 'You won! Hooray...'
         }
             
     }
     game();
-    */
+    
 const buttons = document.querySelectorAll('button')
     console.log(buttons)
 
@@ -95,3 +158,4 @@ const userScore = document.querySelector('.user-score')
 const computerScore = document.querySelector('.computer-score');
 
 
+//console.log(computerScore.textContent)
